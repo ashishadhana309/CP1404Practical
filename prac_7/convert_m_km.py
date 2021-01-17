@@ -1,8 +1,3 @@
-"""
-CP1404/CP5632 Practical
-Kivy GUI program to convert miles to kilometres
-"""
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
@@ -23,16 +18,16 @@ class ConvertMilesToKilometersApp(App):
 
     def handle_calculate(self, value):
         """ handle calculation  """
-            result = float(value) * 1.6093
-            self.answer = str(result)
+        result = float(value) * 1.6093
+        self.answer = str(result)
 
 
-    def handle_increment(self, value):
-        """ handle increment and decrement when up/down button is pressed"""
-            if float(self.root.ids.input_number.text) + value < 0:
-                self.root.ids.input_number.text = "0"
-            else:
-                self.root.ids.input_number.text = str(float(self.root.ids.input_number.text) + value)
+def handle_increment(self, value):
+    """ handle increment and decrement when up/down button is pressed"""
+    if float(self.root.ids.input_number.text) + value < 0:
+        self.root.ids.input_number.text = "0"
+    else:
+        self.root.ids.input_number.text = str(float(self.root.ids.input_number.text) + value)
 
 
 ConvertMilesToKilometersApp().run()

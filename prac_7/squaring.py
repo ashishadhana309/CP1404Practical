@@ -1,17 +1,13 @@
-"""
-CP1404/CP5632 Practical
-Kivy GUI program to square a number
-"""
-
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
 
-__author__ = 'abcd'
+__author__ = 'Ashish'
 
 
 class SquareNumberApp(App):
     """ SquareNumberApp is a Kivy App for squaring a number """
+
     def build(self):
         """ build the Kivy app from the kv file """
         Window.size = (200, 100)
@@ -21,9 +17,8 @@ class SquareNumberApp(App):
 
     def handle_calculate(self, value):
         """ handle calculation (could be button press or other call), output result to label widget """
-            result = float(value) ** 2
-            self.root.ids.output_label.text = str(result)
-
+        result = float(value) ** 2
+        self.root.ids.output_label.text = str(result)
 
 
 SquareNumberApp().run()

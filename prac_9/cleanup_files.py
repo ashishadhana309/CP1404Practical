@@ -2,7 +2,6 @@ import os
 
 
 def main():
-
     # Change to desired directory
     os.chdir('Lyrics')
     for directory_name, subdirectories, filenames in os.walk('.'):
